@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+    color: #111111;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    border-bottom: 1px solid #111111;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+nav a {
+    border: 1px solid #111111;
+    border-radius: 18px;
+    padding: 7px 13px;
+    color: #111111;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #eeeeee;
+}
+
+nav a.active {
+    border-color: #1769ff;
+    background-color: #1769ff;
+    color: #ffffff;
+}
+
+main {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.home-title {
+    margin: 0;
+    font-size: clamp(64px, 13vw, 180px);
+    font-weight: 800;
+    line-height: 0.85;
+    letter-spacing: -5px;
+    text-align: center;
+}
+
+.content {
+    width: 100%;
+    max-width: 720px;
+}
+
+.content h1 {
+    margin: 0 0 10px;
+    font-size: 38px;
+}
+
+.box {
+    border: 1px solid #111111;
+    border-radius: 12px;
+    background-color: #ffffff;
+    padding: 28px;
+}
+
+.box p:first-child {
+    margin-top: 0;
+}
+
+.box p:last-child {
+    margin-bottom: 0;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    border: 1px solid #111111;
+    border-radius: 18px;
+    background-color: #ffffff;
+    padding: 8px 16px;
+    color: #111111;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #eeeeee;
+}
+
+input {
+    width: 100%;
+    border: 1px solid #111111;
+    border-radius: 8px;
+    padding: 10px 12px;
+    background-color: #ffffff;
+    color: #111111;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.field {
+    margin-bottom: 18px;
+}
+
+.result {
+    min-height: 24px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.style-box {
+    min-height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #111111;
+    border-radius: 8px;
+    background-color: #e4edff;
+    padding: 20px;
+    text-align: center;
+}
+
+.item-list {
+    margin: 0 0 20px;
+    padding-left: 24px;
+}
+
+.item-list li {
+    margin-bottom: 8px;
+}
+
+.mouse-box {
+    min-height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #111111;
+    border-radius: 8px;
+    background-color: #1769ff;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.calculator-buttons button {
+    font-size: 20px;
+}
+
+.task-form {
+    display: flex;
+    gap: 10px;
+}
+
+.task-form input {
+    flex: 1;
+}
+
+.task-form button {
+    flex-shrink: 0;
+}
+
+.task-list {
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.task-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid #dddddd;
+    padding: 12px 0;
+}
+
+.task-list span {
+    flex: 1;
+    cursor: pointer;
+}
+
+.completed {
+    color: #777777;
+    text-decoration: line-through;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #111111;
+    padding: 18px 24px;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 14px 10px;
+    }
+
+    nav {
+        gap: 6px;
+    }
+
+    nav a {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+
+    main {
+        padding: 35px 16px;
+    }
+
+    .home-title {
+        font-size: 18vw;
+        letter-spacing: -2px;
+    }
+
+    .content h1 {
+        font-size: 30px;
+    }
+
+    .box {
+        padding: 20px;
+    }
+
+    .task-form {
+        flex-direction: column;
+    }
+
+    footer {
+        padding: 16px;
+    }
+}
